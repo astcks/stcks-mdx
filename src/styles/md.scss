@@ -1,0 +1,23 @@
+@use 'mixin';
+@use 'variable';
+
+.markdown-body {
+  font-size: variable.$font-color;
+  // toc
+  .toc {
+    box-shadow: variable.$shadow;
+    padding: variable.$padding-default;
+  }
+  // Header
+  h2,
+  h3,
+  h4,
+  h5 {
+    padding-bottom: 0.3rem;
+    border-bottom: variable.$header-border;
+  }
+  //link
+  a {
+    @include mixin.link
+  }
+}
