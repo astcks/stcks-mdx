@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react';
 import mdx from '@mdx-js/rollup';
 import codesandbox from 'remark-codesandbox';
 import gfm from 'remark-gfm';
-import markGit from "remark-git-contributors";
 import remarkToc from 'remark-toc';
 import remarkParse from 'remark-parse'
 import remarkMath from 'remark-math'
@@ -29,7 +28,6 @@ export default defineConfig(({ mode }) => {
           [codesandbox, { mode: 'button' }],
           gfm,
           emoji,
-          markGit,
           remarkMath,
           remarkParse,
           remarkRehype,
