@@ -15,8 +15,6 @@ import rehypeSlug from 'rehype-slug';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeToc from '@jsdevtools/rehype-toc';
-import { mdElementAddClass } from './plugins/md-element-add-class';
-import { codeDemoGenerate } from './plugins/code-scanner';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -34,7 +32,6 @@ export default defineConfig(({ mode }) => {
           remarkParse,
           remarkRehype,
           [remarkFrontmatter, ['yaml', 'toml']],
-          codeDemoGenerate,
           remarkToc,
         ],
         recmaPlugins: [],
@@ -43,7 +40,6 @@ export default defineConfig(({ mode }) => {
           rehypeSlug,
           rehypeAutolinkHeadings,
           rehypeHighlight,
-          mdElementAddClass,
           rehypeStringify,
           [rehypeToc, {
             headings: ['h2', 'h3', 'h4']
